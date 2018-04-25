@@ -1,0 +1,30 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+div {
+    outline: 1px dotted black;
+}
+.container{
+    width: 970px;
+    min-height: 300px;
+}
+.container div{
+    width: 970px;
+    min-height: 80px;
+    display: block;
+}
+.adClass{
+    color: red;
+}
+#image{
+    height: 60px;
+    width: 60px;
+}
+.kagebunshin{
+    height: 50px;
+    width: 50px;
+}
+.Other{
+    vertical-align: top;
+}

@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>My jQuery basic assignment!</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="jQueryFunctions.css" />
+    <script type="text/javascript" src= 'http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js'></script>
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $("#btnAdd").click(function(){
+                if($("#btnAdd").text()=="Remove Class"){
+                    $("#pAdd").removeClass("adClass");
+                    $("#btnAdd").text("Add Class");
+                }
+                else{                    
+                    $("#pAdd").addClass("adClass");
+                    $("#btnAdd").text("Remove Class");
+                }
+            });
+            $("#btnSlide").click(function(){
+                $("#hSlide").slideToggle();
+            });
+            $("#btnAppend").click(function(){
+                $("#pAppend").append(" <b>a new paragraph!</b>");
+            });
+            $("#drpBox").change(function(){
+                $("#btnOther").text(String($("#drpBox").val()));                    
+            });
+            $("#btnRemove").click(function(){
+                $(".kagebunshin").remove();
+                $("#btnRemove").hide();
+            })
+            $("#btnOther").click(function(){
+                if($("#btnOther").text()=="Hide Ninja!"){
+                    $("#btnOther").text("Show Ninja!");
+                    $("#image").hide();
+                }
+                else if($("#btnOther").text()=="Show Ninja!"){
+                    $("#btnOther").text("Hide Ninja!");
+                    $("#image").show();
+                }
+                else if($("#btnOther").text()=="Toggle Ninja!"){
+                    $("#image").toggle();
+                }
+                else if($("#btnOther").text()=="Slide Up Ninja!"){
+                    $("#btnOther").text("Slide Down Ninja!");
+                    $("#image").slideUp();
+                }
+                else if($("#btnOther").text()=="Slide Down Ninja!"){
+                    $("#btnOther").text("Slide Up Ninja!");
+                    $("#image").slideDown();
+                }
+                else if($("#btnOther").text()=="Fade Out Ninja!"){
+                    $("#btnOther").text("Fade In Ninja!");
+                    $("#image").slideUp();
+                }
+                else if($("#btnOther").text()=="Fade In Ninja!"){
+                    $("#btnOther").text("Fade Out Ninja!");
+                    $("#image").slideDown();
+                }
+                else if($("#btnOther").text()=="Kagebunshin to the left!"){
+                    $("#btnRemove").show();
+                    $("#image").before("<img src='ninja.png' alt='Duplicate Ninja' class='kagebunshin'>");
+                }
+                else if($("#btnOther").text()=="Kagebunshin to the right!"){
+                    $("#btnRemove").show();
+                    $("#image").after("<img src='ninja.png' alt='Duplicate Ninja' class='kagebunshin'>");
+                }
+                else if($("#btnOther").text()=="Ninja Hacks!"){
+                    $("h1").html("NINJA CAN HACK!!! lol XD");
+                }
+                else if($("#btnOther").text()=="Make ninja fly!"){
+                    $("#image").attr("src","mario.jpg");
+                    console.log(ht);
+                }
+            })
+
+            $("#btnRemove").hide();
+            $("#btnOther").text(String($("#drpBox").val()));
+        });
+    </script>
+</head>
+<body>
+    <div class="container">
+        <div>
+            <h1 id="hAdd">Add Class</h1>
+            <button id="btnAdd" value="">Add Class</button>
+            <p id="pAdd">Click the button to add class 'red' to this paragraph</p>
+        </div>
+        <div>
+            <h1 id="hSlide">Slidetoggle</h1>
+            <button id="btnSlide" value="">Slidetoggle</button>
+            <label id="lblSlide">Click the button to slide toggle a hidden image</label>
+        </div>
+        <div>
+            <h1 id="hAppend">Append</h1>
+            <button id="btnAppend" value="">Append</button>
+            <p id="pAppend">Click the button to append a new paragraph!</p>
+        </div>
+        <div>
+            <h1 id="hOther">Other Functions</h1>
+            <p id="pOther">Select a function:</p>
+            <select id="drpBox" class="Other">
+                <option value="Hide Ninja!">Hide</option>
+                <option value="Toggle Ninja!">Toggle</option>
+                <option value="Slide Up Ninja!">Slide Up</option>
+                <option value="Fade Out Ninja!">Fade Out</option>
+                <option value="Kagebunshin to the left!">Before</option>
+                <option value="Kagebunshin to the right!">After</option>
+                <option value="Ninja Hacks!">HTML</option>
+                <option value="Make ninja fly!">Attribute</option>
+            </select>
+            <button id="btnOther" class="Other"></button>
+            <button id="btnRemove" class="Other">Remove Duplicates</button>
+            <img src="ninja.png" alt="Ninja" id="image">      
+        </div>            
+    </div>
+</body>
+</html>
