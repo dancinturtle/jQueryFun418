@@ -1,0 +1,1 @@
+This project will include multiple different uses of jQuery

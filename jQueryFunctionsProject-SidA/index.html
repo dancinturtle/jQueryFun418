@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>jQuery Functions</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+	<script type="text/javascript">
+		$(document).ready(function(){
+				$(".addingClass button").click(function(){
+					$("p").addClass("red");
+					});
+				$("#target h1").click(function(){
+					alert("Handler for .click() called");
+				})
+				$(".hide button").click(function(){
+					$("img").hide();
+				})
+				$(".show").click(function(){
+					$("img").show();
+				})
+				$(".toggle button").click(function(){
+					$("h4").toggle();
+				})
+				$("#cat").hide();
+				$( "#clickme" ).click(function() {
+					  $("#cat").slideDown( "slow", function() {
+					    // Animation complete.
+  					});
+					  });
+				$(".slideUp button").click(function(){
+					$("#cat").slideUp("slow", function(){
+
+					});
+				});
+
+				$(".slideToggle h1").click(function(){
+					$("#cat2").slideToggle("slow");
+				});
+
+				$("#catAgain").hide();
+				$(".fadeInOut h1").click(function(){
+					$("#catAgain").fadeIn("slow");
+				});
+				$(".fadeInOut h2").click(function(){
+					$("#catAgain").fadeOut("slow");
+				});
+				$(".watchMeBefore p").before("<b>Yo yo Yo It worked</b>");
+				$(".watchMeBefore p").after("<b> Yo Yo Yo after worked too</>");
+				$(".watchMeAppend p").append("<strong>We did it!</strong>");
+				$(".makeItHappen").html("<b> Did it work?</b>")
+				$("#cat3").attr("title", "free Photos")
+				function displayVals(){
+					var singleValues= $(".single").val();
+					var multipleValues= $(".multiples").val() || [];
+					$(".dealingWithVals p").html("<b>Single:</b>" + singleValues+" <b>Multiple:</b>" +multipleValues.join(", "));
+				}
+				$("select").change(displayVals);
+				displayVals();
+
+				var str= $(".testingText p:first").text();
+				$(".testingText p:last").html( str );
+
+				$(".Data").data("test", {first: 16, last:"pizza!"});
+				$(".Data span:first").text($(".Data").data("test").first);
+				$(".Data span:last").text($(".Data").data("test").last);
+
+		});
+	</script>
+</head>
+<body>
+
+	<div id="wrapper">
+		<div class="addingClass">
+			<button>Add Class</button>
+
+			<h1>Add Class</h1>
+			<p>Pressing the button will add class 'red' to this paragraph</p>
+		</div>
+		<div id="target">
+			<h1>Click Demo</h1>
+		</div>
+		<div class="hide">
+
+			<img src="cat.png">
+			<button>Hide</button>
+			<button class="show">show</button>
+		</div>
+		<div class="toggle">
+			<h4>press the button to dissapear and reaaoear</h4>
+			<button>Reapear Disappear</button>
+		</div>
+
+		<h1>This will slow show the lion picture:</h1>
+		<div id="clickme">
+		  Click here
+		</div>
+		<img id="cat" src= "cat.png" alt="un" width="100" height="123">
+		<div class="slideUp">
+			<h1>Click the button to make the lion from above slide up when open</h1>
+			<button>SlideUp</button>
+		</div>
+
+		<div class="slideToggle">
+			<h1>This is a slide toggle. Toggle the kitty please by clicking me</h1>
+			<img id="cat2" src="cat2.png" alt="un">
+		</div>
+
+		<div class="fadeInOut">
+			<h1>Press here to make a cat fade in</h1>
+			<img id="catAgain" src="cat2.png" alt="un">
+			<h2>Press here to make the cat fade out</h2>
+		</div>
+
+		<div class="watchMeBefore">
+			<p>If everything works out We will have something added before this</p>
+			
+		</div>
+
+		<div class="watchMeAppend">
+			<p>If this works we will append more words after the colon: </p>
+		</div>
+
+		<div class="makeItHappen">
+			
+		</div>
+		<div class="checkAttr">
+			<img id="cat3" src="cat2.png" alt="un">
+		</div>
+		<div class="dealingWithVals">
+			<p></p>
+			<select class="single">
+				<option>Single</option>
+				<option>Single2</option>
+				</select>
+			<select class="multiples" multiple="multiple">
+				<option selected="selected">Multiple</option>
+				<option >Multiple2</option>
+				<option selected="selected">Multiple3</option>
+			
+			</select>
+		</div>
+		<div class="testingText">
+			<p><b>Testing </b> text function paragraph Paragraph</p>
+			<p></p>
+		</div>
+
+		<div class="Data">
+			<h1>This is an example of the .data function in jquery</h1>
+			<span></span>
+			<span></span>
+		</div>
+
+	</div>
+
+
+		
+	
+
+</body>
+</html>
