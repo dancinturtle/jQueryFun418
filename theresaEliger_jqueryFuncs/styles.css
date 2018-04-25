@@ -1,0 +1,94 @@
+* {
+    margin: auto;
+    padding: 0;
+}
+
+h1 {
+    font-size: 40px;
+}
+
+#showBox {
+    display: none;
+}
+
+#fadeInBox {
+    display:none;
+}
+
+#testdiv {
+    background: black;
+    width: 100px;
+    height: 100px;
+}
+
+#addClassTest {
+    outline: 1px dotted white;
+    width: 150px;
+    height: 150px;
+    border: 1px solid white;
+}
+
+.container {
+    width: 970px;
+    min-height: 800px;
+    background: #72875E;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 10px;
+}
+
+.functionMain {
+    width: 900px;
+    background: #A6C48A; 
+    text-align: center; 
+}
+
+
+.functionSub {
+    width: 700px;
+    min-height: 150px;
+    background: #A1BF85;
+    margin-top: 5px;
+    margin-left: 100px;
+    padding: 10px;
+}
+
+.buttons {
+    background-color: #CCA543;
+    border: none;
+    color: white;
+    padding: 10px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    font-size: 15px;
+    display: inline-block;
+    border-radius: 10px;
+}
+
+.demoBox {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background: #EDC04E;
+}
+
+.pinkBox {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background:#93A3B1;
+}
+
+
+
+.beforeAfterBox {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background: azure;
+}
+
+.demoBorder {
+    width: 600px;
+    height: 10px;
+    border-top: 5px solid #214D54;
+}

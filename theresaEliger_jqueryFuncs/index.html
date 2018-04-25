@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>jQuery Functions</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="styles.css" />
+    <script type="text/javascript" src='http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js'></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("#click").click(function () {
+                $("#clickText").text('jQuery\'s .click function altered the text of this empty <p> tag.');
+            });
+            $("#hide").click(function () {
+                $("#hideMe").hide("slow");
+            });
+            $("#showMe").click(function () {
+                $("#showBox").show("slow");
+            });
+            $("#toggle").click(function () {
+                $("#toggleBox").toggle("fast");
+            });
+            $("#slideUp").click(function () {
+                $("#slideUpBox").slideUp();
+            });
+            $("#slideDown").click(function () {
+                $("#slideUpBox").slideDown();
+            });
+            $("#slideToggle").click(function () {
+                $("#slideToggleBox").slideToggle();
+            });
+            $("#fadeOut").click(function () {
+                $("#fadeOutBox").fadeOut();
+            });
+            $("#fadeIn").click(function () {
+                $("#fadeInBox").fadeIn("slow");
+            });
+            $("#addClass").click(function () {
+                $("#addClassTest").addClass("pinkBox");
+            });
+            $("#before").click(function () {
+                $("#beforeAfter").before("<h2>Isn\'t </h2>");
+            });
+            $("#after").click(function () {
+                $("#beforeAfter").after("<h2>awesome?</h2> <p>:D</p>");
+            });
+            $("#append").click(function () {
+                $("h1").append("<div class='demoBorder'></div>");
+            });
+            $("#html").click(function () {
+                $("#htmlText").html("<h1>Bigger and bolder!</h1>");
+            });
+            $("#attr").click(function () {
+                $("img").attr("width", "500px");
+            });
+            $("#valButton").click(function () {
+                $("input:text").val("Donuts are delicious!");
+            });
+            $("#textButton").click(function () {
+                $("#alteredText").text("I wish this <p> tag was a donut.")
+            });
+            $("#dataButton").click(function () {
+                $("div").data("hi");
+                $("span").text("cool");
+            });
+        });
+    </script>
+
+</head>
+
+<body>
+    <!-- begin container -->
+    <div class="container">
+
+        <!-- begin center container -->
+        <div class="functionMain">
+
+            <!-- begin .click demo -->
+            <div class="functionSub">
+                <h1>.click</h1>
+                <button id="click" class="buttons">.click();</button>
+                <p id="clickText"></p>
+            </div>
+
+            <!-- begin .hide and .show demo -->
+            <div class="functionSub">
+                <h1>.hide</h1>
+                <button id="hide" class="buttons">.hide();</button>
+                <p>Click .hide(); to send our circle away.</p>
+                <p>Click .show(); to bring it back home.</p>
+                <div id="hideMe" class="demoBox"></div>
+            </div>
+
+            <div class="functionSub">
+                <h1>.show</h1>
+                <button id="showMe" class="buttons">.show();</button>
+                <p>Click .show(); to bring our circle back.</p>
+                <div id="showBox" class="demoBox"></div>
+            </div>
+
+            <!-- begin .toggle demo -->
+            <div class="functionSub">
+                <h1>.toggle</h1>
+                <button id="toggle" class="buttons">.toggle();</button>
+                <p>The .toggle() function makes our circle go from display:block to display: none.</p>
+                <div id="toggleBox" class="demoBox"></div>
+            </div>
+
+            <!-- begin .slideUp and .slideDown demo -->
+            <div class="functionSub">
+                <h1>.slideUp / .slideDown</h1>
+                <p>Note: Click "slideUp();" first.</p>
+                <button id="slideUp" class="buttons">.slideUp();</button>
+                <button id="slideDown" class="buttons">.slideDown();</button>
+                <div id="slideUpBox" class="demoBox"></div>
+            </div>
+
+            <!-- begin .slideToggle demo -->
+            <div class="functionSub">
+                <h1>.slideToggle</h1>
+                <button id="slideToggle" class="buttons">.slideToggle();</button>
+                <div id="slideToggleBox" class="demoBox"></div>
+            </div>
+
+            <!-- begin .fadeOut demo -->
+            <div class="functionSub">
+                <h1>.fadeOut</h1>
+                <button id="fadeOut" class="buttons">.fadeOut();</button>
+                <div id="fadeOutBox" class="demoBox"></div>
+
+            </div>
+
+            <!-- begin .fadeIn demo -->
+            <div class="functionSub">
+                <h1>.fadeIn</h1>
+                <button id="fadeIn" class="buttons">.fadeIn();</button>
+                <div id="fadeInBox" class="demoBox"></div>
+            </div>
+
+            <!-- begin .addClass demo -->
+            <div class="functionSub">
+                <h1>.addClass</h1>
+                <button id="addClass" class="buttons">.addClass();</button>
+                <p>This button will add the class .demoBox to this div.</p>
+                <div id="addClassTest"></div>
+            </div>
+
+            <!-- begin .before and .after demo -->
+            <div class="functionSub">
+                <h1>.before / .after</h1>
+                <button id="before" class="buttons">.before();</button>
+                <button id="after" class="buttons">.after();</button>
+                <p>Click these buttons to make text appear before and after text below:</p>
+                <h2 id="beforeAfter">jQuery</h2>
+            </div>
+
+
+            <!-- begin append demo -->
+            <div class="functionSub">
+                <h1>.append</h1>
+                <button id="append" class="buttons">.before();</button>
+                <p>Clicking this button will "underline" each of our h1 tags.</p>
+            </div>
+
+            <!-- begin html demo -->
+            <div class="functionSub">
+                <h1>.html</h1>
+                <button id="html" class="buttons">html();</button>
+                <p>This button this will alter the html of our page.</p>
+                <p id="htmlText">The HTML function will overwrite existing HTML.</p>
+            </div>
+
+            <!-- begin attr demo -->
+            <div class="functionSub">
+                <h1>.attr</h1>
+                <button id="attr" class="buttons">attr();</button>
+                <p>This button will expand our tiny donuts from 100px to 500px wide.</p>
+                <img src="donuts.jpg" width="100px">
+            </div>
+
+            <!-- begin val demo -->
+            <div class="functionSub">
+                <h1>.val</h1>
+                <button id="valButton" class="buttons">.val();</button>
+                <p>
+                    <input type="text">
+                </p>
+            </div>
+
+            <!-- begin text demo -->
+            <div class="functionSub">
+                <h1>.text</h1>
+                <button id="textButton" class="buttons">.text();</button>
+                <p id="alteredText">This button will alter this text.</p>
+            </div>
+
+            <!-- being data demo -->
+            <div class="functionSub">
+                <h1>.data</h1>
+                <button id="dataButton" class="buttons">.data();</button>
+                <p class="dataText">jQuery is
+                    <span></span>!</p>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
