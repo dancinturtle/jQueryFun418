@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" type="text/css" href="style2.css">
+    <meta charset="UTF-8">
+    <title>jQuery functions</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+         
+            $("#header").click(function () {
+                alert("AWESOME JavaScript library");
+            });
+            $("#hide").click(function () {
+                $("#hide button").hide();
+            });
+            $("#show").click(function () {
+                $("#hide button").show();
+            });
+            $("#toggle").click(function () {
+                $("#toggle button").toggle();
+            });
+            $("#slideUp").click(function () {
+                $("#slideUp button").slideUp();
+            });
+            $("#slideUp").click(function () {
+                $("#slideUp button").slideDown();
+            });
+            $("#slideToggle").click(function () {
+                $("#slideToggle h1").slideToggle();
+            });
+    
+            $("#fadeOut button").click(function () {
+                $("#fadeOut button").fadeOut();
+            });
+            $("#fadeOut button").click(function () {
+                $("#fadeOut button").fadeIn();
+            });
+            $("#addClass").click(function () {
+                $("p").addClass("paragraph");
+            });
+            $("#after p").click(function () {
+                $("#after p").after("-This is the after text-");
+            });
+            $("#before p").click(function () {
+                $("#before p").before("-This is the before text-");
+            });
+            $("#append p").click(function () {
+                $("#append p").append(" and now the original text extends");
+            });
+            $("HTML p").click(function () {
+                $("HTML p").html("This is what happends with HTML(), it replaces original content");
+            });
+            $("#attr button").click(function () {
+                $("#attr p").attr("color", "yellow");
+            });
+            $("#before").click(function () {
+                $("#before p").before("-This is the before text-");
+            });
+
+            $("#val span").click(function () {
+                $("input:text").val("Hello World!");
+            });
+            $("#text h1").click(function () {
+                $("#text h1").text("this is how text() works");
+            });
+            $(".button").click(function () {
+                $(".button").data("greeting", "hello ninjas");
+            });
+            $(".button2").click(function () {
+                $(".button2").data("greeting");
+            });
+            
+
+        });
+    </script>
+
+</head>
+
+<body>
+    <div id = "container">
+        <div id = "header">jQuery Documentations</div>
+    <div class="jquery" id="hide">
+        <h1>Hide</h1>
+        <button>Click Me!</button>
+        <p>Text goes here</p>
+    </div>
+    <div class="jquery" id="show">
+        <h1>Show</h1>
+        <button>Click Me!</button>
+        <p>Text goes here</p>
+    </div>
+    <div class="jquery" id="toggle">
+        <h1>Toggle</h1>
+        <button>Click Me!</button>
+        <p>Text goes here</p>
+    </div>
+    <div class="jquery" id="slideDown">
+        <h1>Slide Down</h1>
+        <button>Click Me!</button>
+        <p>Text goes here</p>
+    </div>
+    <div class="jquery" id="slideUp">
+        <h1>Slide Up</h1>
+        <button>Click Me!</button>
+        <p>Text goes here</p>
+    </div>
+    <div class="jquery" id="slideToggle">
+        <h1>Slide Toggle</h1>
+        <button>Click Me!</button>
+        <p>Text goes here</p>
+    </div>
+    <div class="jquery" id="fadeIn">
+        <h1>Fade In</h1>
+        <button>Click Me!</button>
+        <p>Text goes here</p>
+    </div>
+    <div class="jquery" id="fadeOut">
+        <h1>Fade Out</h1>
+        <button>Click Me!</button>
+        <p>Text goes here</p>
+    </div>
+    <div class="jquery" id="addClass">
+        <h1>Add Class</h1>
+        <button>Click Me!</button>
+        <p>Text goes here</p>
+    </div>
+    <div class="jquery" id="before">
+        <h1>Before</h1>
+        <button>Click Me!</button>
+        <p>Text goes here</p>
+    </div>
+    <div class="jquery" id="after">
+        <h1>After</h1>
+        <button>Click Me!</button>
+        <p>Text goes here</p>
+    </div>
+    <div class="jquery" id="append">
+        <h1>Append</h1>
+        <button>Click Me!</button>
+        <p>Text goes here</p>
+    </div>
+    <div class="jquery" id="html">
+        <h1>HTML</h1>
+        <button>Click Me!</button>
+        <p>Text goes here</p>
+    </div>
+    <div class="jquery" id="attr">
+        <h1>Attr</h1>
+        <button>Click Me!</button>
+        <p>Text goes here</p>
+    </div>
+    <div class="jquery" id="val">
+        <h1>Val</h1>
+        <span>Name: <input type="text" name="user"></span>
+        <button>Click Me!</button>
+        <p>Text goes here</p>
+    </div>
+    <div class="jquery" id="text">
+        <h1>Text</h1>
+        <button>Click Me!</button>
+        <p>Text goes here</p>
+    </div>
+    <div class="jquery" id="data">
+        <h1>Data</h1>
+        <button class = "button">Click Me!</button>
+        <button class = "button2">Click here!</button>
+        <p>Text goes here</p>
+        <div></div>
+    </div>
+    </div>
+    
+
+</body>
+
+</html>
