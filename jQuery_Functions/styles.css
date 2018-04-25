@@ -1,0 +1,43 @@
+body {
+  outline: 2px solid grey;
+  width: 1150px;
+  height: 2000px;
+}
+
+h1 {
+  color: #0c455e;
+  text-shadow: 2px 2px 4px #000000;
+
+  text-align: center;
+  font-size: 60px;
+}
+.header {
+  background: rgb(2,0,36);
+  background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(12,69,94,1) 46%, rgba(2,0,36,1) 100%);
+}
+.main {
+  background-color: #85848a;
+}
+button {
+  width: 100px;
+  height: 35px;
+  border-radius: 12px;
+  box-shadow: 3px 3px 5px #1e1a25;
+  color: #0c1c3c;
+  color: silver;
+  font-size: 16px;
+  margin-right: 40px;
+  background: rgb(2,0,36);
+  background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(12,69,94,1) 46%, rgba(2,0,36,1) 100%);
+
+}
+.cell {
+  border-bottom: 2px solid #1e1a25;
+  padding: 20px;
+  font-size: 20px;
+}
+h2 {
+  text-align: center;
+  font-size: 43px;
+  border:
+}
