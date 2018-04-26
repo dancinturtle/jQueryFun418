@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Arash's jQuery Functions</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script type="text/javascript" src="script.js"></script>
+</head>
+
+<body>
+    <div id="addClass">
+        <input class="inline" type="button" value="Add Class">
+        <div class="inline">
+            <h1>AddClass</h1>
+            <p>Click the button to add class 'red' to this paragraph.</p>
+        </div>
+    </div>
+    <hr>
+    <div id="slideToggle">
+        <input class="inline" type="button" value="Slide Toggle">
+        <div class="inline">
+            <h1>SlideToggle</h1>
+            <p>Click the button to slideToggle a hidden image.</p>
+            <img class="image" src="images/dog.jpeg" alt="dog image">
+        </div>
+    </div>
+    <hr>
+    <div id="hideShow">
+        <input id="btnToggle" class="inline" type="button" value="Toggle">
+        <input id="btnHide" class="inline" type="button" value="Hide">
+        <input id="btnShow" class="inline" type="button" value="Show">
+        <div class="inline">
+            <h1>Toggle, Hide, &amp; Show</h1>
+            <p>Click the buttons to toggle, hide, and show the image.</p>
+            <img class="image" src="images/waterfall.jpg" alt="Waterfall image">
+        </div>
+    </div>
+    <hr>
+    <div id="slideUpDown">
+        <input id="btnSlideUp" class="inline" type="button" value="Slide Up">
+        <input id="btnSlideDown" class="inline" type="button" value="Slide Down">
+        <div class="inline">
+            <h1>Slide Up, &amp; Slide Down</h1>
+            <p>Click the button to slideUp, and slideDown the image.</p>
+            <img class="image" src="images/tiger.jpg" alt="tiger image">
+        </div>
+    </div>
+    <hr>
+    <div id="fadeInOut">
+        <input id="btnFadeIn" class="inline" type="button" value="Fade In">
+        <input id="btnFadeOut" class="inline" type="button" value="Fade Out">
+        <div class="inline">
+            <h1>Fade In, &amp; Fade Out</h1>
+            <p>Click the button to fadeIn, and fadeOut the text.</p>
+            <p id="txtFade">The former FBI director will have a new chance to make his case to the country in a CNN town hall meeting Wednesday night at his alma mater, The College of William and Mary in Williamsburg, Virginia, hosted by Anderson Cooper.</p>
+        </div>
+    </div>
+    <hr>
+    <div id="beforeAfterAppend">
+        <input id="btnBefore" class="inline" type="button" value="Before">
+        <input id="btnAfter" class="inline" type="button" value="After">
+        <input id="btnPrepend" class="inline" type="button" value="Prepend">
+        <input id="btnAppend" class="inline" type="button" value="Append">
+        <div class="contentBox">
+            <h1>Before, After, Prepend, and Append</h1>
+            <p>Click the button to before, after, prepend, and append the text.</p>
+            <div class="bisque" id="listBeforeAfter">
+                <p>- The former FBI director.</p>
+                <p>- Have a new chance to make.</p>
+                <p>- The Anderson Cooper.</p>
+            </div>
+        </div>
+    </div>
+    <hr>
+    <div id="alterAttribute">
+        <input id="btnCheck1" class="inline" type="button" value="Change Text">
+        <input id="btnCheck2" class="inline" type="button" value="Change Checked">
+        <div class="contentBox">
+            <h1>Attribute, and Val</h1>
+            <p>Click the buttons see what happens using attr!</p>
+            <input id="myCheckBox" type="checkbox" checked>My Checkbox</input>
+        </div>
+    </div>
+    <hr>
+    <div id="altHtml">
+        <input id="btnHtml" class="inline" type="button" value="Alter the div">
+        <div class="contentBox">
+            <h1>HTML</h1>
+            <h3>NOW YOU SEE ME!</h3>
+            <input type="checkbox" checked>Checkbox 1</input>
+            <input type="checkbox" checked>Checkbox 2</input>
+            <input type="radio" checked>Option 1</input>
+            <input type="radio" checked>Option 2</input>
+        </div>
+    </div>
+    <hr>
+    <div id="theText">
+        <input id="btnText" class="inline" type="button" value="Get The Text and put in PlaceHolder">
+        <div class="contentBox">
+            <h1>Text</h1>
+            <h3>This is a simple content!</h3>
+            <p>The College of William and Mary in Williamsburg.</p>
+            <input type="checkbox" checked>My Checkbox</input>
+            <input type="radio" checked>My Option</input>
+        </div>
+        <p id="placeHolder" class="bisque">PlaceHolder</p>
+    </div>
+    <hr>
+    <div id="theData">
+        <div class="contentBox">
+            <button>Get "data" from the div</button>
+            <button>Set "data" to "hello"</button>
+            <button>Set "data" to 2018</button>
+            <button>Remove "data" from the div</button>
+
+            <h1>Data</h1>
+
+            <p>The "data" value of this div is <span>?</span></p>
+        </div>
+    </div>
+</body>
+
+</html>
