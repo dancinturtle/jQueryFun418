@@ -1,0 +1,42 @@
+.red {
+    background-color: red;
+}
+
+.bisque {
+    background-color: bisque;
+}
+
+.inline {
+    display: inline-block;
+    vertical-align: top;
+    margin-left: 40px;
+}
+
+div.inline {
+    margin-left: 50px;
+}
+
+div input {
+    margin-top: 30px;
+}
+
+#slideToggle img {
+    height: 80px;
+    display: none;
+}
+
+#hideShow img {
+    height: 150px;
+}
+
+#slideUpDown img {
+    width: 100%;
+}
+
+#txtFade {
+    color: blue;
+}
+
+.contentBox {
+    margin-left: 50px;
+}
